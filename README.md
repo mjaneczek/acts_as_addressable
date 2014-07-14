@@ -1,6 +1,8 @@
-# ActsAsAddressable
+# acts_as_addressable
 
-TODO: Write a gem description
+[![Build Status](https://travis-ci.org/mjaneczek/acts_as_addressable.svg?branch=master)](https://travis-ci.org/mjaneczek/acts_as_addressable) 
+[![CodeClimate](https://codeclimate.com/github/mjaneczek/acts_as_addressable.png)](https://codeclimate.com/github/mjaneczek/acts_as_addressable) 
+[![Code Climate](https://codeclimate.com/github/mjaneczek/acts_as_addressable/coverage.png)](https://codeclimate.com/github/mjaneczek/acts_as_addressable)
 
 ## Installation
 
