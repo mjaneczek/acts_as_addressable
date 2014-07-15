@@ -1,8 +1,8 @@
 require 'bundler/setup'
 Bundler.setup
 
-Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |file| require file }
 require 'acts_as_addressable'
+Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |file| require file }
 
 RSpec.configure do |config|
 

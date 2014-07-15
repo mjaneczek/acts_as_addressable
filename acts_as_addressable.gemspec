@@ -20,4 +20,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'codeclimate-test-reporter'
   spec.add_development_dependency 'generator_spec'
+  spec.add_development_dependency 'sqlite3'
+  spec.add_development_dependency 'activerecord'
 end
