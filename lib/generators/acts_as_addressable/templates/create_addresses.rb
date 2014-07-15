@@ -6,6 +6,7 @@ class CreateAddresses < ActiveRecord::Migration
       t.string :<%= field %>
 <% end -%>
       t.references :addressable, polymorphic: true
+      t.string :type
 
       t.timestamps
     end

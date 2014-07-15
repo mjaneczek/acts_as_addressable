@@ -12,6 +12,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.string   :line_2
     t.integer  :addressable_id
     t.string   :addressable_type
+    t.string   :type
 
     t.datetime :created_at
     t.datetime :updated_at
