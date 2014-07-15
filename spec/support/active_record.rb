@@ -3,7 +3,7 @@ require 'active_record'
 ActiveRecord::Base.establish_connection adapter: 'sqlite3', database: ':memory:'
 
 ActiveRecord::Schema.define(version: 0) do
-  create_table :company, force: true do |t|
+  create_table :companies, force: true do |t|
     t.string :name
   end
 
@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 0) do
 end
 
 class Company < ActiveRecord::Base
-  acts_as_addressable
 end
 
 class Address < ActiveRecord::Base

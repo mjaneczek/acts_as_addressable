@@ -6,7 +6,7 @@ module ActsAsAddressable
 
     module ClassMethods
       def acts_as_addressable(*args)
-
+        has_many :addresses, as: :addressable, dependent: :destroy
       end
     end
   end
