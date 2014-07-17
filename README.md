@@ -1,6 +1,6 @@
 # acts_as_addressable
 
-[![Build Status](https://travis-ci.org/mjaneczek/acts_as_addressable.svg?branch=master)](https://travis-ci.org/mjaneczek/acts_as_addressable) 
+[![Build Status](https://travis-ci.org/mobilityhouse/acts_as_addressable.svg?branch=master)](https://travis-ci.org/mobilityhouse/acts_as_addressable)
 [![CodeClimate](https://codeclimate.com/github/mjaneczek/acts_as_addressable.png)](https://codeclimate.com/github/mjaneczek/acts_as_addressable) 
 [![Code Climate](https://codeclimate.com/github/mjaneczek/acts_as_addressable/coverage.png)](https://codeclimate.com/github/mjaneczek/acts_as_addressable)
 
@@ -8,19 +8,37 @@
 
 Add this line to your application's Gemfile:
 
-    gem 'acts_as_addressable'
+    gem 'acts_as_addressable', git: 'git@github.com:mobilityhouse/acts_as_addressable.git'
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
 
-    $ gem install acts_as_addressable
+## Getting started
 
-## Usage
+#### Generate model and migration
+First you need to create model and migration for your address. To do this you need to run the generator: 
 
-TODO: Write usage instructions here
+     rails g acts_as_addressable:install street postcode city country
+    
+You can pass your own address attributes, default are: street, city and state.
+
+#### Add addresses to your model
+
+You can add addresses to many models and each model can has many address types!
+```
+class Company < ActiveRecord::Base
+  acts_as_addressable :postal, :billing
+end
+
+company = Company.create
+company.postal_addresses.create street: 'test'
+
+company.addresses # => [#<PostalAddress id: 1, street: "test", ...]
+company.postal_addresses # => [#<PostalAddress id: 1, street: "test", ...]
+company.billing_addresses # => []
+```
 
 ## Contributing
 
