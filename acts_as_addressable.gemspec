@@ -4,7 +4,7 @@ require 'acts_as_addressable/version'
 Gem::Specification.new do |spec|
   spec.name          = 'acts_as_addressable'
   spec.version       = ActsAsAddressable::VERSION
-  spec.authors       = ['Michał Janeczek']
+  spec.authors       = ['Michal Janeczek']
   spec.email         = ['michal.janeczek@ymail.com']
   spec.summary       = %q{Make your models addressable!}
   spec.homepage      = 'https://github.com/mjaneczek/acts_as_addressable'
